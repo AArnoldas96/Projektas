@@ -76,6 +76,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                         buildGoogleApiClient();
                         mMap.setMyLocationEnabled(true);
+                        setting.setZoomControlsEnabled(true);
             }
         }
         else {
