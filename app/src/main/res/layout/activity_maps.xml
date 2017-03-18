@@ -27,6 +27,34 @@
             android:text="Paieška" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <CheckBox
+            android:text="Maistas"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox1"
+            android:layout_weight="0.13" />
+
+        <CheckBox
+            android:text="Plovykla"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox2"
+            android:layout_weight="0.14" />
+
+        <CheckBox
+            android:text="Oras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox3"
+            android:layout_weight="0.57" />
+    </LinearLayout>
+
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
