@@ -10,6 +10,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -37,10 +38,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener{
 
+
+    public static final String mPath = "station.txt";
+    public static final String TAG = MapsActivity.class.getSimpleName();
+
     private GoogleMap mMap;
     private UiSettings setting;
     private Location mLastLocation;
     private Marker mCurrLocationMarker;
+    private MakingStations stationReader;
+    private GasStation[] stationArray;
+
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
 
@@ -76,13 +84,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
                         buildGoogleApiClient();
                         mMap.setMyLocationEnabled(true);
-                        setting.setZoomControlsEnabled(true);
             }
         }
         else {
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
-            setting.setZoomControlsEnabled(true);
+        }
+        setting.setZoomControlsEnabled(true);
+
+        stationReader = new MakingStations(this);
+        stationArray = stationReader.readFiles(mPath);
+
+        for (GasStation station : stationArray) {
+            mMap.addMarker(new MarkerOptions()
+                    .position(station.Location)
+                    .title(station.toString()));
         }
     }
 
