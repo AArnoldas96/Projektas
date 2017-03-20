@@ -1,4 +1,63 @@
-Pramonės pr. 6A, Kaunas; Neste; true; true; true
-Jonavos g. 110, Kaunas; Neste; false; true; false
-Veiverių g. 132D, Kaunas; Neste; false; true; true
-Žemaičių pl. 26, Kaunas; Neste; false; true; false
+﻿Pramonės pr. 6A, Kaunas;Neste;true;false;true
+Jonavos g. 110, Kaunas;Neste;false;false;false
+Veiverių g. 132D, Kaunas;Neste;false;false;true
+Žemaičių pl. 26, Kaunas;Neste;false;false;false
+R. Kalantos g. 27, Kaunas;Neste;false;false;false
+Ateities pl. 50B, Kaunas;Neste;true;false;false
+Taikos pr. 80A, Kaunas;Neste;true;false;true
+Birželio 23-iosios g. 23A, Kaunas;Neste;false;false;false
+Islandijos pl. 191E, Kaunas;Neste;true;false;true
+Raudondvario pl. 103, Kaunas;Neste;false;false;false
+Kuršių g 1;Neste;true;false;true
+Tunelio g. 26, Kaunas;Neste;true;false;true
+Savanorių pr. 441 C, Kaunas;Neste;false;false;false
+Biruliškių g. 18A, Kaunas;BP;false;false;false
+Chemijos g. 6, Kaunas;BP;true;true;true
+Jonavos g. 60A, Kaunas;BP;true;true;false
+Minkovskių g. 132, Kaunas;BP;true;true;false
+Raudondvario g. 82, Kaunas;BP;true;true;true
+Taikos pr. 120, Kaunas;BP;true;false;false
+Vaidoto g. 153, Kaunas;BP;true;true;false
+Ateities pl. 40B, Kaunas;EMSI;false;false;false
+Palemono g. 3A, Kaunas;EMSI;false;false;false
+Jonavos g. 51, Kaunas;Jozita;true;false;true
+Kuršių 13A, Kaunas;Jozita;true;false;false
+Ateities pl. 37A, Kaunas;Lukoil;true;true;true
+Islandijos pl. 61A, Kaunas;Lukoil;true;true;false
+K. Baršausko g. 64, Kaunas;Lukoil;true;true;true
+Karaliaus Mindaugo pr. 54, Kaunas;Lukoil;true;true;true
+Lukšio g. 66A;Lukoil;true;true;true
+Raudondvario pr. 288, Kaunas;Lukoil;true;true;false
+Statybininkų g. 3A, Kaunas;Lukoil;true;true;false
+T. Masiulio g. 18D, Kaunas;Lukoil;true;true;false
+Veiverių g. 124B, Kaunas;Lukoil;true;true;true
+Baltijos g. 90b, Kaunas;Luktarna;true;true;false
+Didžioji g. 68, Kaunas;Luktarna;true;true;false
+A. Juozapavičiaus pr. 90, Kaunas;Luktarna;true;true;false
+Marijampolės pl. 29, Kaunas;Luktarna;true;true;false
+Miežėnų g. 18, Kaunas;Luktarna;true;true;false
+Ateities pl. 105, Kaunas;Luktarna;true;true;false
+Pramonės pr. 44, Kaunas;Luktarna;true;true;false
+Veiverių g. 117, Kaunas;Luktarna;true;true;false
+Pramonės pr. 37, Kaunas;Orlen;false;false;false
+Varnių g. 50, Kaunas;Orlen;false;false;false
+Veiverių g. 148 b, Kaunas;Orlen;false;false;false
+Krėvės pr 116;Saurida;true;false;false
+Pramonės pr. 18, Kaunas;Statoil;false;false;true
+Raudondvario pl. 107A, Kaunas;Statoil;false;false;true
+Savanorių pr. 321, Kaunas;Statoil;false;false;true
+Veiverių pl. 49A, Kaunas;Statoil;false;false;true
+Žemaičių pl. 19, Kaunas;Statoil;false;false;true
+Savanorių pr. 402A, Kaunas;Statoil;false;false;false
+Taikos pr. 52A, Kaunas;Statoil;false;false;true
+Briedžių takas 6B, Kaunas;Statoil;true;false;false
+Islandijos pl. 61C, Kaunas;Statoil;true;false;false
+Karaliaus Mindaugo pr. 34A, Kaunas;Statoil;false;false;false
+Kalantos g. 68, Kaunas;Statoil;false;false;false
+Varnių g. 46, Kaunas;Statoil;false;false;false
+Islandijos pl. 32;Statoil;false;false;false
+Savanorių pr. 404, Kaunas;Statoil;false;false;true
+Tvirtovės g. 33A, Kaunas;Statoil;false;false;false
+Sukilėlių 120;Statoil;false;false;false
+Baršausko g. 57, Kaunas;Statoil;false;false;false
+Jonavos g. 38, Kaunas;Statoil;false;false;true
