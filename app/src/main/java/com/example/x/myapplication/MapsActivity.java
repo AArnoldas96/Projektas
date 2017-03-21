@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
@@ -48,6 +50,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Marker mCurrLocationMarker;
     private MakingStations stationReader;
     private GasStation[] stationArray;
+    List<Marker> mMarkers = new ArrayList<Marker>();
 
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
@@ -96,10 +99,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         stationArray = stationReader.readFiles(mPath);
 
         for (GasStation station : stationArray) {
-            mMap.addMarker(new MarkerOptions()
+            MarkerOptions markerOptions = new MarkerOptions();
+            markerOptions.position(station.Location);
+            Marker marker = mMap.addMarker(new MarkerOptions()
                     .position(station.Location)
                     .title(station.toString()));
+            mMarkers.add(marker);
+            /*mMap.addMarker(new MarkerOptions()
+                    .position(station.Location)
+                    .title(station.toString()));*/
         }
+
     }
 
     @Override
@@ -142,6 +152,247 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
             mMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+        }
+    }
+
+    public void selectItem(View view){
+        boolean checked = ((CheckBox) view).isChecked();
+        CheckBox check1 = (CheckBox)findViewById(R.id.checkBox1);//maistas
+        CheckBox check2 = (CheckBox)findViewById(R.id.checkBox2);//plovykla
+        CheckBox check3 = (CheckBox)findViewById(R.id.checkBox3);//oras
+        switch (view.getId()){
+            case R.id.checkBox1:
+                if(checked){
+                    for (GasStation station : stationArray) {
+                        if(check2.isChecked() && check3.isChecked()){
+                            if(!(station.getFood() && station.getCarwash() && station.getAir())) {
+                                for (Marker marker : mMarkers){
+                                    if(marker.getTitle().equals(station.toString())){
+                                        marker.remove();
+                                    }
+                                }
+                            }
+
+                        }
+                        else if(check2.isChecked()){
+                            if(!(station.getFood() && station.getCarwash())) {
+                                for (Marker marker : mMarkers){
+                                    if(marker.getTitle().equals(station.toString())){
+                                        marker.remove();
+                                    }
+                                }
+                            }
+                        }
+                        else if(check3.isChecked()){
+                            if(!(station.getFood() && station.getAir())) {
+                                for (Marker marker : mMarkers){
+                                    if(marker.getTitle().equals(station.toString())){
+                                        marker.remove();
+                                    }
+                                }
+                            }
+                        }
+                        else {
+                            if (!(station.getFood()==true)) {
+                                for (Marker marker : mMarkers) {
+                                    if (marker.getTitle().equals(station.toString())) {
+                                        marker.remove();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else{
+                    for (GasStation station : stationArray) {
+                        if(check2.isChecked() && check3.isChecked()){
+                            if(station.getCarwash() && station.getAir()) {
+                                Marker marker=mMap.addMarker(new MarkerOptions()
+                                        .position(station.Location)
+                                        .title(station.toString()));
+                                mMarkers.add(marker);
+                            }
+                        }
+                        else if(check2.isChecked()){
+                            if(station.getCarwash()) {
+                                Marker marker=mMap.addMarker(new MarkerOptions()
+                                        .position(station.Location)
+                                        .title(station.toString()));
+                                mMarkers.add(marker);
+                            }
+                        }
+                        else if(check3.isChecked()){
+                            if(station.getAir()) {
+                                Marker marker=mMap.addMarker(new MarkerOptions()
+                                        .position(station.Location)
+                                        .title(station.toString()));
+                                mMarkers.add(marker);
+                            }
+                        }
+                        else {
+                            Marker marker=mMap.addMarker(new MarkerOptions()
+                                    .position(station.Location)
+                                    .title(station.toString()));
+                            mMarkers.add(marker);
+                        }
+                    }
+                }
+                break;
+            case R.id.checkBox2:
+                if(checked){
+                    for (GasStation station : stationArray) {
+                        if(check1.isChecked() && check3.isChecked()){
+                            if(!(station.getFood() && station.getCarwash() && station.getAir())) {
+                                for (Marker marker : mMarkers){
+                                    if(marker.getTitle().equals(station.toString())){
+                                        marker.remove();
+                                    }
+                                }
+                            }
+
+                        }
+                        else if(check1.isChecked()){
+                            if(!(station.getFood() && station.getCarwash())) {
+                                for (Marker marker : mMarkers){
+                                    if(marker.getTitle().equals(station.toString())){
+                                        marker.remove();
+                                    }
+                                }
+                            }
+                        }
+                        else if(check3.isChecked()){
+                            if(!(station.getCarwash() && station.getAir())) {
+                                for (Marker marker : mMarkers){
+                                    if(marker.getTitle().equals(station.toString())){
+                                        marker.remove();
+                                    }
+                                }
+                            }
+                        }
+                        else {
+                            if (!station.getCarwash()==true) {
+                                for (Marker marker : mMarkers) {
+                                    if (marker.getTitle().equals(station.toString())) {
+                                        marker.remove();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else{
+                    for (GasStation station : stationArray) {
+                        if(check1.isChecked() && check3.isChecked()){
+                            if(station.getFood() && station.getAir()) {
+                                Marker marker=mMap.addMarker(new MarkerOptions()
+                                        .position(station.Location)
+                                        .title(station.toString()));
+                                mMarkers.add(marker);
+                            }
+                        }
+                        else if(check1.isChecked()){
+                            if(station.getFood()) {
+                                Marker marker=mMap.addMarker(new MarkerOptions()
+                                        .position(station.Location)
+                                        .title(station.toString()));
+                                mMarkers.add(marker);
+                            }
+                        }
+                        else if(check3.isChecked()){
+                            if(station.getAir()) {
+                                Marker marker=mMap.addMarker(new MarkerOptions()
+                                        .position(station.Location)
+                                        .title(station.toString()));
+                                mMarkers.add(marker);
+                            }
+                        }
+                        else {
+                            Marker marker=mMap.addMarker(new MarkerOptions()
+                                    .position(station.Location)
+                                    .title(station.toString()));
+                            mMarkers.add(marker);
+                        }
+                    }
+                }
+                break;
+            case R.id.checkBox3:
+                if(checked){
+                    for (GasStation station : stationArray) {
+                        if(check1.isChecked() && check2.isChecked()){
+                            if(!(station.getFood() && station.getCarwash() && station.getAir())) {
+                                for (Marker marker : mMarkers){
+                                    if(marker.getTitle().equals(station.toString())){
+                                        marker.remove();
+                                    }
+                                }
+                            }
+
+                        }
+                        else if(check1.isChecked()){
+                            if(!(station.getFood() && station.getAir())) {
+                                for (Marker marker : mMarkers){
+                                    if(marker.getTitle().equals(station.toString())){
+                                        marker.remove();
+                                    }
+                                }
+                            }
+                        }
+                        else if(check2.isChecked()){
+                            if(!(station.getCarwash() && station.getAir())) {
+                                for (Marker marker : mMarkers){
+                                    if(marker.getTitle().equals(station.toString())){
+                                        marker.remove();
+                                    }
+                                }
+                            }
+                        }
+                        else {
+                            if (!station.getAir()) {
+                                for (Marker marker : mMarkers) {
+                                    if (marker.getTitle().equals(station.toString())) {
+                                        marker.remove();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else{
+                    for (GasStation station : stationArray) {
+                        if(check1.isChecked() && check2.isChecked()){
+                            if(station.getFood() && station.getCarwash()) {
+                                Marker marker=mMap.addMarker(new MarkerOptions()
+                                        .position(station.Location)
+                                        .title(station.toString()));
+                                mMarkers.add(marker);
+                            }
+                        }
+                        else if(check1.isChecked()){
+                            if(station.getFood()) {
+                                Marker marker=mMap.addMarker(new MarkerOptions()
+                                        .position(station.Location)
+                                        .title(station.toString()));
+                                mMarkers.add(marker);
+                            }
+                        }
+                        else if(check2.isChecked()){
+                            if(station.getFood()) {
+                                Marker marker=mMap.addMarker(new MarkerOptions()
+                                        .position(station.Location)
+                                        .title(station.toString()));
+                                mMarkers.add(marker);
+                            }
+                        }
+                        else {
+                            Marker marker=mMap.addMarker(new MarkerOptions()
+                                    .position(station.Location)
+                                    .title(station.toString()));
+                            mMarkers.add(marker);
+                        }
+                    }
+                }
+                break;
+
         }
     }
 

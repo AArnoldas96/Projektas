@@ -26,6 +26,15 @@ public class GasStation {
         Carwash = carwash;
     }
 
+    public boolean getFood(){
+        return Food;
+    }
+    public boolean getAir(){
+        return Air;
+    }
+    public boolean getCarwash(){
+        return Carwash;
+    }
     public void setLocation(LatLng locat){
         Location = locat;
     }

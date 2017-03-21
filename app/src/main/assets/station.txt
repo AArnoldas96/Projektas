@@ -1,4 +1,4 @@
-Pramonės pr. 6A, Kaunas; Neste; true; true; true
-Jonavos g. 110, Kaunas; Neste; false; true; false
-Veiverių g. 132D, Kaunas; Neste; false; true; true
-Žemaičių pl. 26, Kaunas; Neste; false; true; false
+Pramonės pr. 6A, Kaunas; Neste;true;true;true
+Jonavos g. 110, Kaunas;Neste;false;true;false
+Veiverių g. 132D, Kaunas;Neste;false;true;true
+Žemaičių pl. 26, Kaunas;Neste;false;true;false
