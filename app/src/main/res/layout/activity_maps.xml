@@ -35,24 +35,31 @@
 
         <CheckBox
             android:text="Maistas"
-            android:layout_width="133dp"
+            android:layout_width="96dp"
             android:layout_height="wrap_content"
             android:id="@+id/checkBox1"
-            android:layout_weight="0.13" />
+            android:onClick="selectItem"
+            android:checked="false"
+            android:layout_weight="0.11" />
 
         <CheckBox
             android:text="Plovykla"
-            android:layout_width="135dp"
+            android:layout_width="105dp"
             android:layout_height="wrap_content"
             android:id="@+id/checkBox2"
-            android:layout_weight="0.14" />
+            android:onClick="selectItem"
+            android:checked="false"
+            android:layout_weight="0.10" />
 
         <CheckBox
             android:text="Oras"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/checkBox3"
-            android:layout_weight="0.57" />
+            android:layout_weight="0.16"
+            android:onClick="selectItem"
+            android:checked="false" />
+
     </LinearLayout>
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"

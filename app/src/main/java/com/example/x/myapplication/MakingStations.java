@@ -62,7 +62,8 @@ public class MakingStations {
         int i = 0;
         for (String station : stations){
             String[] parts = station.split(";");
-            stationArray[i++] = new GasStation(parts[0], parts[1], Boolean.parseBoolean(parts[2]),
+            if (parts.length > 3)
+                stationArray[i++] = new GasStation(parts[0], parts[1], Boolean.parseBoolean(parts[2]),
                     Boolean.parseBoolean(parts[3]), Boolean.parseBoolean(parts[4]));
         }
     }
@@ -76,7 +77,8 @@ public class MakingStations {
         try {
             // May throw an IOException
             address = coder.getFromLocationName(strAddress, 5);
-            if (address == null) {
+            if (address.size() < 1) {
+                Log.d(MapsActivity.TAG, strAddress);
                 return null;
             }
             Address location = address.get(0);
