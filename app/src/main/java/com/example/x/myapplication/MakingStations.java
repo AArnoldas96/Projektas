@@ -16,9 +16,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Arnoldas on 2017-03-18.
- */
 
 public class MakingStations {
     private Context mContext;

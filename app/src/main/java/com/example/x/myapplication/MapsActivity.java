@@ -157,244 +157,351 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
     }
 
-    public void selectItem(View view){
+    public void selectItem(View view) {
         boolean checked = ((CheckBox) view).isChecked();
-        CheckBox check1 = (CheckBox)findViewById(R.id.checkBox1);//maistas
-        CheckBox check2 = (CheckBox)findViewById(R.id.checkBox2);//plovykla
-        CheckBox check3 = (CheckBox)findViewById(R.id.checkBox3);//oras
-        switch (view.getId()){
+        CheckBox check1 = (CheckBox) findViewById(R.id.checkBox1);//maistas
+        CheckBox check2 = (CheckBox) findViewById(R.id.checkBox2);//plovykla
+        CheckBox check3 = (CheckBox) findViewById(R.id.checkBox3);//oras
+        switch (view.getId()) {
             case R.id.checkBox1:
-                if(checked){
-                    for (GasStation station : stationArray) {
-                        if(check2.isChecked() && check3.isChecked()){
-                            if(!(station.getFood() && station.getCarwash() && station.getAir())) {
-                                for (Marker marker : mMarkers){
-                                    if(marker.getTitle().equals(station.toString())){
-                                        marker.remove();
+                if (checked) {
+                    if (check2.isChecked() && check3.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!(station.getFood() && station.getCarwash() && station.getAir())) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
                                     }
                                 }
                             }
+                        }
 
-                        }
-                        else if(check2.isChecked()){
-                            if(!(station.getFood() && station.getCarwash())) {
-                                for (Marker marker : mMarkers){
-                                    if(marker.getTitle().equals(station.toString())){
-                                        marker.remove();
+                    } else if (check2.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!(station.getFood() && station.getCarwash())) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
                                     }
                                 }
                             }
                         }
-                        else if(check3.isChecked()){
-                            if(!(station.getFood() && station.getAir())) {
-                                for (Marker marker : mMarkers){
-                                    if(marker.getTitle().equals(station.toString())){
-                                        marker.remove();
+                    } else if (check3.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!(station.getFood() && station.getAir())) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
                                     }
                                 }
                             }
                         }
-                        else {
-                            if (!(station.getFood()==true)) {
-                                for (Marker marker : mMarkers) {
-                                    if (marker.getTitle().equals(station.toString())) {
-                                        marker.remove();
+                    } else {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!(station.getFood() == true)) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
-                else{
-                    for (GasStation station : stationArray) {
-                        if(check2.isChecked() && check3.isChecked()){
-                            if(station.getCarwash() && station.getAir()) {
-                                Marker marker=mMap.addMarker(new MarkerOptions()
-                                        .position(station.Location)
-                                        .title(station.toString()));
-                                mMarkers.add(marker);
+
+                } else {
+                    if (check2.isChecked() && check3.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if(station.getFood()!=true) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
+
                             }
                         }
-                        else if(check2.isChecked()){
-                            if(station.getCarwash()) {
-                                Marker marker=mMap.addMarker(new MarkerOptions()
-                                        .position(station.Location)
-                                        .title(station.toString()));
-                                mMarkers.add(marker);
+                    } else if (check2.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (station.getCarwash() && station.getFood()!=true) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+
+                                }
                             }
                         }
-                        else if(check3.isChecked()){
-                            if(station.getAir()) {
-                                Marker marker=mMap.addMarker(new MarkerOptions()
-                                        .position(station.Location)
-                                        .title(station.toString()));
-                                mMarkers.add(marker);
+                    } else if (check3.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (station.getAir() && station.getFood()!=true) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
                             }
                         }
-                        else {
-                            Marker marker=mMap.addMarker(new MarkerOptions()
-                                    .position(station.Location)
-                                    .title(station.toString()));
-                            mMarkers.add(marker);
+                    } else {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!station.getFood()) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
+                            }
                         }
                     }
                 }
                 break;
             case R.id.checkBox2:
-                if(checked){
-                    for (GasStation station : stationArray) {
-                        if(check1.isChecked() && check3.isChecked()){
-                            if(!(station.getFood() && station.getCarwash() && station.getAir())) {
-                                for (Marker marker : mMarkers){
-                                    if(marker.getTitle().equals(station.toString())){
-                                        marker.remove();
+                if (checked) {
+                    if (check1.isChecked() && check3.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!(station.getFood() && station.getCarwash() && station.getAir())) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
                                     }
                                 }
                             }
+                        }
+                    } else if (check1.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!(station.getFood() && station.getCarwash())) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } else if (check3.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!(station.getCarwash() && station.getAir())) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!station.getCarwash() == true) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    if (check1.isChecked() && check3.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (station.getFood() && station.getAir() && station.getCarwash()!=true) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
+                            }
+                        }
+                    } else if (check1.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (station.getFood() && station.getCarwash()!=true) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
+                            }
+                        }
+                    } else if (check3.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (station.getAir() && station.getCarwash()!=true) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
+                            }
+                        }
+                    } else {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!station.getCarwash() && station.getCarwash()!=true) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
+                            }
+                        }
+                    }
+                }
 
-                        }
-                        else if(check1.isChecked()){
-                            if(!(station.getFood() && station.getCarwash())) {
-                                for (Marker marker : mMarkers){
-                                    if(marker.getTitle().equals(station.toString())){
-                                        marker.remove();
-                                    }
-                                }
-                            }
-                        }
-                        else if(check3.isChecked()){
-                            if(!(station.getCarwash() && station.getAir())) {
-                                for (Marker marker : mMarkers){
-                                    if(marker.getTitle().equals(station.toString())){
-                                        marker.remove();
-                                    }
-                                }
-                            }
-                        }
-                        else {
-                            if (!station.getCarwash()==true) {
-                                for (Marker marker : mMarkers) {
-                                    if (marker.getTitle().equals(station.toString())) {
-                                        marker.remove();
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                else{
-                    for (GasStation station : stationArray) {
-                        if(check1.isChecked() && check3.isChecked()){
-                            if(station.getFood() && station.getAir()) {
-                                Marker marker=mMap.addMarker(new MarkerOptions()
-                                        .position(station.Location)
-                                        .title(station.toString()));
-                                mMarkers.add(marker);
-                            }
-                        }
-                        else if(check1.isChecked()){
-                            if(station.getFood()) {
-                                Marker marker=mMap.addMarker(new MarkerOptions()
-                                        .position(station.Location)
-                                        .title(station.toString()));
-                                mMarkers.add(marker);
-                            }
-                        }
-                        else if(check3.isChecked()){
-                            if(station.getAir()) {
-                                Marker marker=mMap.addMarker(new MarkerOptions()
-                                        .position(station.Location)
-                                        .title(station.toString()));
-                                mMarkers.add(marker);
-                            }
-                        }
-                        else {
-                            Marker marker=mMap.addMarker(new MarkerOptions()
-                                    .position(station.Location)
-                                    .title(station.toString()));
-                            mMarkers.add(marker);
-                        }
-                    }
-                }
                 break;
             case R.id.checkBox3:
-                if(checked){
-                    for (GasStation station : stationArray) {
-                        if(check1.isChecked() && check2.isChecked()){
-                            if(!(station.getFood() && station.getCarwash() && station.getAir())) {
-                                for (Marker marker : mMarkers){
-                                    if(marker.getTitle().equals(station.toString())){
-                                        marker.remove();
+                if (checked) {
+                    if (check1.isChecked() && check2.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!(station.getFood() && station.getCarwash() && station.getAir())) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
                                     }
                                 }
-                            }
 
+                            }
                         }
-                        else if(check1.isChecked()){
-                            if(!(station.getFood() && station.getAir())) {
-                                for (Marker marker : mMarkers){
-                                    if(marker.getTitle().equals(station.toString())){
-                                        marker.remove();
+                    } else if (check1.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!(station.getFood() && station.getAir())) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
                                     }
                                 }
                             }
                         }
-                        else if(check2.isChecked()){
-                            if(!(station.getCarwash() && station.getAir())) {
-                                for (Marker marker : mMarkers){
-                                    if(marker.getTitle().equals(station.toString())){
-                                        marker.remove();
+                    } else if (check2.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!(station.getCarwash() && station.getAir())) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
                                     }
                                 }
                             }
                         }
-                        else {
-                            if (!station.getAir()) {
-                                for (Marker marker : mMarkers) {
-                                    if (marker.getTitle().equals(station.toString())) {
-                                        marker.remove();
+                    } else {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!station.getAir()) {
+                                    for (Marker marker : mMarkers) {
+                                        if (marker.getTitle().equals(station.toString())) {
+                                            //marker.remove();
+                                            mMarkers.remove(marker);
+                                            marker.remove();
+                                            break;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
-                }
-                else{
-                    for (GasStation station : stationArray) {
-                        if(check1.isChecked() && check2.isChecked()){
-                            if(station.getFood() && station.getCarwash()) {
-                                Marker marker=mMap.addMarker(new MarkerOptions()
-                                        .position(station.Location)
-                                        .title(station.toString()));
-                                mMarkers.add(marker);
+                } else {
+                    if (check1.isChecked() && check2.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (station.getFood() && station.getCarwash() && station.getAir()!=true) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
                             }
                         }
-                        else if(check1.isChecked()){
-                            if(station.getFood()) {
-                                Marker marker=mMap.addMarker(new MarkerOptions()
-                                        .position(station.Location)
-                                        .title(station.toString()));
-                                mMarkers.add(marker);
+                    } else if (check1.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (station.getFood() && station.getAir()!=true) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
                             }
                         }
-                        else if(check2.isChecked()){
-                            if(station.getFood()) {
-                                Marker marker=mMap.addMarker(new MarkerOptions()
-                                        .position(station.Location)
-                                        .title(station.toString()));
-                                mMarkers.add(marker);
+                    } else if (check2.isChecked()) {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (station.getFood() && station.getAir()!=true) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
                             }
                         }
-                        else {
-                            Marker marker=mMap.addMarker(new MarkerOptions()
-                                    .position(station.Location)
-                                    .title(station.toString()));
-                            mMarkers.add(marker);
+                    } else {
+                        for (GasStation station : stationArray) {
+                            if (station.Location != null) {
+                                if (!station.getAir()) {
+                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                            .position(station.Location)
+                                            .title(station.toString()));
+                                    mMarkers.add(marker);
+                                }
+                            }
                         }
                     }
                 }
                 break;
-
         }
     }
 

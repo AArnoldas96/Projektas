@@ -3,10 +3,6 @@ package com.example.x.myapplication;
 
 import com.google.android.gms.maps.model.LatLng;
 
-/**
- * Created by Arnoldas on 2017-03-18.
- */
-
 public class GasStation {
     private String StationName;
     String Adress;
