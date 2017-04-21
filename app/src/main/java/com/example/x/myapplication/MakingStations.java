@@ -28,9 +28,6 @@ public class MakingStations {
         List<String> stations = readLine(filepath);
         GasStation[] stationArray = new GasStation[stations.size()];
         StationMaking(stations, stationArray);
-        for (GasStation station : stationArray) {
-            station.setLocation(getLocationFromAddress(station.Adress));
-        }
         return stationArray;
     }
 
@@ -59,13 +56,17 @@ public class MakingStations {
         int i = 0;
         for (String station : stations){
             String[] parts = station.split(";");
-            if (parts.length > 3)
-                stationArray[i++] = new GasStation(parts[0], parts[1], Boolean.parseBoolean(parts[2]),
-                    Boolean.parseBoolean(parts[3]), Boolean.parseBoolean(parts[4]));
+            if (parts.length > 3) {
+                LatLng loc = new LatLng(Double.parseDouble(parts[5]), Double.parseDouble(parts[6]));
+                stationArray[i] = new GasStation(parts[0], parts[1], Boolean.parseBoolean(parts[2]),
+                        Boolean.parseBoolean(parts[3]), Boolean.parseBoolean(parts[4]));
+                stationArray[i].setLocation(loc);
+                i++;
+            }
         }
     }
 
-    private LatLng getLocationFromAddress(String strAddress) {
+   /* private LatLng getLocationFromAddress(String strAddress) {
 
         Geocoder coder = new Geocoder(this.mContext);
         List<Address> address;
@@ -90,5 +91,5 @@ public class MakingStations {
         }
 
         return p1;
-    }
+    }*/
 }

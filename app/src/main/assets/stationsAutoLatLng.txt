@@ -1,0 +1,267 @@
+Erfurto g. 41, Vilnius;Neste Lazdynų;true;false;false;54.6728033;25.1980308
+Geležinio Vilko g. 63, Vilnius;Neste Ozo;false;false;false;54.6700764;25.2403395
+S. Stanevičiaus g. 3, Vilnius;Neste Stanevičiaus;false;false;true;54.7214509;25.2561800
+Žirmūnų g. 68B, Vilnius;Neste Žirmūnų;true;false;false;54.7175120;25.3044870
+Rygos g. 2, Vilnius;Neste Justiniškių;true;false;true;54.7155639;25.2290060
+Savanorių pr. 220A, Vilnius;Neste Savanorių 1;true;false;false;54.6442470;25.2074835
+Parodų g. 1A, Vilnius;Neste Litexpo;false;false;false;54.6734160;25.2241269
+Kauno g. 26, Vilnius;Neste Kauno;false;false;true;54.6715989;25.2700069
+Savanorių pr. 187, Vilnius;Neste Savanorių 2;false;false;false;54.6468350;25.2101769
+Kedrų g. 2, Vilnius;Neste Rimi;false;false;true;54.6755967;25.2550915
+Molėtų pl. 8, Vilnius;Neste Santariškių;false;false;true;54.7548520;25.2714060
+P. Lukšio g. 22, Vilnius;Neste Lukšio;false;false;true;54.7119540;25.2929549
+Žirmūnų g. 54C, Vilnius;Neste Minties;false;false;true;54.7068159;25.3041249
+Subačiaus g. 64, Vilnius;Neste Subačiaus;false;false;true;54.6768439;25.3094619
+Jasinskio g. 14, Vilnius;Neste Jasinskio;false;false;false;54.6869177;25.2628487
+Dariaus ir Girėno g. 17, Vilnius;Neste Kirtimų;false;false;true;54.6550470;25.2707470
+Architektų g. 130, Vilnius;Neste Architektų;false;false;true;54.6808099;25.2076559
+Justiniškių g. 14B, Vilnius;Neste Viršuliškių;false;false;true;54.7055159;25.2150870
+Laisvės pr. 125A, Vilnius;Neste Pašilaičių      ;false;false;true;54.7282089;25.2369979
+Buivydiškių g. 5, Vilnius;Neste Buivydiškių;false;false;false;54.7108467;25.2403786
+Geležinio Vilko g. 37A, Vilnius;Neste Saltoniškių;false;false;true;54.7015089;25.2637679
+Pilaitės pr. 27, Vilnius;Neste Pilaitės;false;false;true;54.7090660;25.1880153
+Žirnių g. 17, Vilnius;Neste Žirnių;false;false;false;54.6566270;25.2920439
+J. Tiškevičiaus g. 19, Vilnius;Neste Trakų Vokės;true;false;false;54.6244120;25.1117159
+Pramonės pr. 6A, Kaunas;Neste Pramonės;true;false;true;54.9100139;23.9835522
+Jonavos g. 110, Kaunas;Neste Jonavos;false;false;false;54.9133671;23.9116064
+Veiverių g. 132D, Kaunas;Neste Veiverių;false;false;true;54.8756460;23.8909270
+Žemaičių pl. 26, Kaunas;Neste Žemaičių;false;false;false;54.9255150;23.8917829
+R. Kalantos g. 27, Kaunas;Neste Kalantos;false;false;false;54.8950590;23.9858550
+Ateities pl. 50B, Kaunas;Neste Ateities;false;false;false;54.9260035;24.0602523
+Taikos pr. 80A, Kaunas;Neste Taikos žiedo;false;false;true;54.9120819;23.9726480
+Birželio 23-iosios g. 23A, Kaunas;Neste  Birželio;false;false;false;54.9160820;23.9538389
+Islandijos pl. 191E, Kaunas;Neste Islandijos;false;false;true;54.9314233;23.9507788
+Raudondvario pl. 103, Kaunas;Neste Raudondvario;false;false;false;54.9068329;23.8728480
+Kuršių g. 1, Kaunas;Neste Kuršių;false;false;true;54.9365023;23.8863318
+Vijoklių g. 1C, Ramučių k., Kauno r. sav., Kaunas;Neste Ramučių;true;false;false;54.9475294;24.0181777
+Tunelio g. 26, Kaunas;Neste Tunelio;false;false;true;54.8947739;23.9442929
+Savanorių pr. 441 C, Kaunas;Neste Muravos;false;false;false;54.9291320;23.9720300
+Vakarinis aplinkkelis 18, Kaunas;Neste Volvo;false;false;false;54.9355457;23.8706042
+Plieno g.1, Klaipėda;Neste Šilutės;false;false;true;55.6743465;21.2015361
+Šilutės pl. 30, Klaipėda;Neste Baltijos pr.;false;false;false;55.6931646;21.1748162
+Taikos pr. 60, Klaipėda;Neste Taikos;false;false;false;55.6889203;21.1549716
+Minijos g. 119, Klaipėda;Neste Minijos;false;false;false;55.6845979;21.1504968
+Artojo g. 2, Klaipėda;Neste Artojo;false;false;false;55.7174314;21.1515083
+Smiltelės g. 17, Klaipėda;Neste Smiltelės;false;false;true;55.6702563;21.1914001
+Šilutės pl. 5, Klaipėda;Neste Sendvario;false;false;true;55.7029860;21.1654050
+Vilniaus pl. 9, Jakų k., Klaipėdos r. sav., Klaipėda;Neste Jakų;true;false;false;55.6929933;21.1796976
+Sendvario g. 2, Sudmantų k., Sendvario sen., 96327, Klaipėda;Neste Sudmantų;true;false;false;55.7049251;21.2067186
+Gegužių g. 28, Šiauliai;Neste Gegužių;false;false;true;55.9060750;23.2594908
+Tilžės g. 72, Šiauliai;Neste Tilžės;true;false;false;55.9202740;23.2929919
+Dubijos g. 18A, Šiauliai;Neste Dubijos;false;false;true;55.9294183;23.2940467
+Klaipėdos g. 81, Panevėžys;Neste IKI;false;false;false;55.7285081;24.3319105
+Ramygalos g. 145B, Panevėžys;Neste Ramygalos;false;false;false;55.7093713;24.3746844
+Klaipėdos g. 66, Panevėžys;Neste Klaipėdos;false;false;false;55.7277759;24.3482463
+Raubonių k., Pasvalio r., Pasvalio r.;Neste Pasvalio r.;false;false;false;56.1226110;24.4704820
+Margirio g. 1B, Panevėžys;Neste Nemuno;false;false;true;55.7194411;24.3488452
+Klaipėdos g. 144B, Panevėžys;Neste Babilono;false;false;false;55.7306541;24.3157358
+Panevėžio aplinkl. 7, Šilagalio k., Panevėžio r. sav., Panevėžys;Neste Šilagalio;true;false;false;55.6702440;24.3483050
+Santaikos g. 34A, Alytus;Neste Santaikos;false;false;true;54.3872506;24.0263549
+Ūdrijos g. 31, Alytus;Neste Ūdrijos;false;false;false;54.4090292;24.0054110
+Stoties g. 4C, Marijampolė;Neste Marijampolės;false;false;false;54.5601302;23.3658508
+M. Daukšos g. 29, Mažeikiai;Neste Mažeikiai;false;false;true;56.3010565;22.3497939
+J. Basanavičiaus g. 91 E, Kėdainiai;Neste Kėdainiai;false;false;false;55.2779359;23.9596405
+Kauno g. 45 B, Ukmergė;Neste Ukmergės;false;false;false;55.2418912;24.7430130
+J. Basanavičiaus g. 129, Utena;Neste Utena;false;false;true;55.5052397;25.6249117
+Aplinkkelio g. 165, Molėtai;Neste Molėtų;true;false;true;55.2182631;25.4178750
+Milašiaus g. 31/18, Vilnius;Orlen;true;true;true;54.7281779;25.3271049
+Ukmergės g. 319, Vilnius;Orlen;true;true;true;54.7369259;25.2319720
+Juodojo kelio g. 32, Vilnius;Orlen;true;true;true;54.6633311;25.3327449
+Pramonės pr. 37, Kaunas;Orlen;true;true;true;54.9159000;23.9841370
+Varnių g. 50, Kaunas;Orlen;true;true;true;54.9139516;23.9066411
+Veiverių g. 148 b, Kaunas;Orlen;true;true;true;54.8672750;23.8874849
+Vilnius-Kaunas 95 km, Kauno r.;Orlen;true;true;true;54.9098430;23.9949020
+Minijos g. 44, Klaipėda;Orlen;true;true;true;55.6939821;21.1399679
+Šilutės pl. 96, Klaipėda;Orlen;true;true;true;55.6793448;21.1989442
+Šilutės pl. 26 A, Klaipėda,;Orlen;true;true;true;55.6985168;21.1661062
+Senamiesčio g. 115, Panevėžys;Orlen;true;true;true;55.7458939;24.3859643
+Skuodo g. 14, Mažeikiai;Orlen;true;true;true;56.3143340;22.3108342
+Žemaitijos g. 42, Mažeikiai;Orlen;true;true;true;56.3023170;22.3421988
+Plungės g. 33, Telšiai;Orlen;true;true;true;55.9789366;22.2266667
+Serbentų g. 82, Šiauliai;Orlen;true;true;true;55.9137156;23.3370541
+Gedimino g. 46, Tauragė;Orlen;true;true;true;55.2442253;22.3037584
+Verbyliškių k., Jiezno sen., Prienų r.;Orlen;true;true;true;54.5759529;24.1714960
+Žiežmarių k., Kaišiadorių r.;Orlen;true;true;true;54.8002119;24.4403869
+Kauno g. 73, Alytus;Orlen;true;true;true;54.4032209;24.0376694
+Ateities g. 17B, Vilnius;Lukoil;true;true;true;54.7356549;25.2585979
+Dariaus ir Girėno g. 30A, Vilnius;Lukoil;true;true;true;54.6523920;25.2726520
+Geležinio vilko 41, Vilnius;Lukoil;true;false;false;54.6736244;25.2447358
+Kirtimų g. 29, Vilnius;Lukoil;true;true;true;54.6332690;25.1508109
+Laisvės 8, Vilnius;Lukoil;true;false;false;54.6741548;25.2227431
+Naugarduko g. 74, Vilnius;Lukoil;true;true;true;54.6712297;25.2616748
+Nemenčinės pl. 5, Vilnius;Lukoil;true;true;false;54.7263895;25.3264527
+Olandų g. 57, Vilnius;Lukoil;true;true;true;54.6821071;25.3138600
+Ozo g. 12, Vilnius;Lukoil;true;true;true;54.7137969;25.2771089
+Pilaitės 28, Vilnius;Lukoil;true;false;false;54.7014299;25.2033937
+Pilaitės pr. 13, Vilnius;Lukoil;true;true;true;54.6994198;25.2137075
+Saltoniškių g. 12, Vilnius;Lukoil;true;true;true;54.6994620;25.2599660
+Sodų 22, Vilnius;Lukoil;true;false;false;54.6706920;25.2817829
+Užubalių kaimas, Vilnius;Lukoil;true;true;true;54.7719750;25.1929620
+Ateities pl. 37A, Kaunas;Lukoil;true;true;true;54.9182043;24.0397221
+Giraitės k., Kaunas;Lukoil;true;true;false;54.9551759;23.8625940
+Islandijos pl. 61A, Kaunas;Lukoil;true;true;false;54.9334890;23.9685099
+K. Baršausko g. 64, Kaunas;Lukoil;true;true;true;54.8976780;23.9581720
+Karaliaus Mindaugo pr. 54, Kaunas;Lukoil;true;true;true;54.8873362;23.9211930
+Margavos k., Kaunas;Lukoil;true;false;false;54.9595889;24.0314080
+P. Lukšio g. 66A, Kaunas;Lukoil;true;true;true;54.9248489;23.9424969
+Raudondvario pr. 288, Kaunas;Lukoil;true;true;false;54.9213329;23.8104690
+Statybininkų g. 3A, Kaunas;Lukoil;true;true;false;54.9201630;23.9487779
+T. Masiulio g. 18D, Kaunas;Lukoil;true;true;false;54.8809739;24.0098399
+Veiverių g. 124B, Kaunas;Lukoil;true;true;true;54.8833509;23.8936200
+Verslo g. 13, Kumpių k., Kaunas;Lukoil;true;true;false;54.9561108;23.8719711
+Liepojos g. 242, Klaipėda;Lukoil;true;true;true;55.7540907;21.1316098
+Priestočio g. 28, Klaipėda;Lukoil;true;false;false;55.7192338;21.1412881
+Taikos pr. 70A, Klaipėda;Lukoil;true;false;true;55.6831558;21.1603651
+Šilutės pl. 52, Klaipėda;Lukoil;true;false;false;55.6818276;21.1849835
+J.Janonio g. 28B, Panevėžys;Lukoil;true;true;true;55.7392037;24.3102759
+Navadolio 31, Panevėžys;Lukoil;true;true;false;55.7147287;24.3354148
+Ramygalos 186G, Panevėžys;Lukoil;true;true;true;55.7092406;24.3739907
+Venslaviškio 16, Panevėžys;Lukoil;true;true;false;55.7369547;24.3869450
+Basanavičiaus 122A, Šiauliai;Lukoil;true;false;false;55.9546409;23.3162479
+Dubijos g. 1C, Šiauliai;Lukoil;true;true;false;55.9263920;23.3075020
+Gegužių g. 26, Šiauliai;Lukoil;true;true;true;55.9052670;23.2603360
+Tilžės g. 274, Šiauliai;Lukoil;true;true;true;55.9440819;23.3313340
+Užmiesčio g. 2, Šiauliai;Lukoil;true;true;true;55.9226700;23.3578939
+Geležinkelio g. 5, Marijampolė;Lukoil;true;true;true;54.5543502;23.3623629
+Ąžuolų Būdos k., Marijampolė;Lukoil;true;false;false;54.7016459;23.5189320
+Naujoji g. 27, Alytus;Lukoil;true;true;false;54.4141576;24.0092691
+Ulonų g. 33B, Alytus;Lukoil;true;false;true;54.3845730;24.0503622
+A. Vienuolio g. 34A, Anykščiai;Lukoil;true;true;true;55.5228003;25.0884487
+Parodos g. 2, Biržai;Lukoil;true;true;true;56.2014961;24.7489183
+Elektrinės g. 6, Elektrėnai;Lukoil;true;true;true;54.7846211;24.6539100
+Saulažolių k., Gargždai;Lukoil;true;true;false;55.7285791;21.3876872
+Kovo 11-osios g. 75, Grigiškės;Lukoil;true;true;false;54.6674775;25.1020602
+Turistų g. 28A, Ignalina;Lukoil;true;true;false;55.3388448;26.1451821
+Darbininkų g. 4D, Jonava;Lukoil;true;true;true;55.0927355;24.2819588
+Vilniaus g. 51, Joniškis;Lukoil;true;false;false;56.2243659;23.6011016
+Gedimino g. 135, Kaišiadorys;Lukoil;true;true;true;54.8554540;24.4418608
+Dariaus ir Girėno g. 81, Kalvarija;Lukoil;true;false;false;54.4225866;23.2324804
+Klaipėdos g. 1A, Kretingalė;Lukoil;true;false;false;55.8875780;21.2342537
+Vilniaus g. 38A, Kuršėnai;Lukoil;true;false;false;56.0000540;22.9475155
+Montuotojų g. 2A, Mažeikiai;Lukoil;true;true;true;56.3138682;22.3006734
+Gojaus km., Molėtų raj.;Lukoil;true;true;false;55.2122780;25.4369970
+Vilniaus g. 116B, Pabradė;Lukoil;true;true;false;54.9749965;25.7449007
+Vytauto Didžiojo g. 98, Pakruojis;Lukoil;true;false;false;55.9802759;23.8561223
+Vilniaus g. 50, Pasvalys;Lukoil;true;true;true;56.0576697;24.4061475
+J.Tumo-Vaižganto g. 102, Plungė;Lukoil;true;true;true;55.9031545;21.8309812
+Respublikos 113B, Rokiškis;Lukoil;true;false;true;55.9511013;25.5903469
+Kužių kaimas, Šiaulių raj.;Lukoil;true;false;false;55.9836949;23.1400009
+Tilžės 59, Šilutė;Lukoil;true;false;false;55.3429168;21.4966020
+Vilniaus 50, Skuodas;Lukoil;true;false;false;56.2709174;21.5455064
+Pramonės 1, Tauragė;Lukoil;true;true;true;55.2407789;22.3052917
+Pramonės 2, Telšiai;Lukoil;true;true;true;55.9922626;22.2446665
+Dukstynos k., Ukmergė;Lukoil;true;true;false;55.2657409;24.8086979
+Žiedo g. 15, Ukmergė;Lukoil;true;false;true;55.2459333;24.7428042
+Pramonės 23, Utena;Lukoil;true;false;false;55.4902276;25.6505016
+Kauno g. 55A, Vievis;Lukoil;true;true;false;54.7759362;24.8129972
+Vytauto 105, Vilkaviškis;Lukoil;true;true;false;54.6477237;23.0291790
+Statybininkų 1, Visaginas;Lukoil;true;true;true;55.5944942;26.4385785
+Santaikos g. 33, Alytus;Baltic Petroleum;true;true;true;54.3867325;24.0332620
+Mindaugo g. 23, Anykščiai;Baltic Petroleum;true;true;false;55.5088765;25.0968977
+Pasvalio g. 1B, Biržai;Baltic Petroleum;true;false;false;56.2020499;24.7366281
+Valantiškio k., Biržų r.;Baltic Petroleum;true;true;false;56.1908529;24.7134689
+Gardino g. 79, Druskininkai;Baltic Petroleum;true;true;false;53.9993436;23.9888075
+Leipalingio g. 26, Druskininkai;Baltic Petroleum;true;true;true;54.0294466;23.9851024
+Leipalingis Merkinės g. 37, Druskininkų r.;Baltic Petroleum;true;true;false;54.0269783;24.0077453
+Spanėnų k. Plento g. 46, Jonavos r.;Baltic Petroleum;true;false;false;55.0635620;24.2768276
+Muitinės g. 22A, Jurbarkas;Baltic Petroleum;true;true;true;55.0787049;22.7424824
+Triliškių k. Kauno pl. 5, Kaišiadorių r.;Baltic Petroleum;true;true;false;54.8045348;24.4420233
+Biruliškių g. 18A, Kaunas;Baltic Petroleum;false;false;false;54.9102032;24.0206431
+Chemijos g. 6, Kaunas;Baltic Petroleum;true;true;true;54.9023770;23.9824990
+Jonavos g. 60A, Kaunas;Baltic Petroleum;true;true;false;54.9050520;23.8995411
+Minkovskių g. 132, Kaunas;Baltic Petroleum;true;true;false;54.8857420;23.9120770
+Raudondvario g. 82, Kaunas;Baltic Petroleum;true;true;true;54.9077130;23.8742199
+Taikos pr. 120, Kaunas;Baltic Petroleum;true;false;false;54.9173990;24.0348439
+Vaidoto g. 153, Kaunas;Baltic Petroleum;true;true;false;54.8612964;23.9585515
+Garliavos sen. Pagirių k. Marijampolės g. 1, Kauno r.;Baltic Petroleum;true;true;true;54.8154500;23.8732227
+Jaučiakių k., Kauno r. Vilkijos sen.;Baltic Petroleum;true;true;false;55.0295549;23.6074399
+Liepų g. 79A, Klaipėda;Baltic Petroleum;true;true;false;55.7205267;21.1526399
+Šilutės pl. 1, Klaipėda;Baltic Petroleum;true;true;false;55.7048647;21.1630721
+J. Basanavičiaus g. 95B, Kėdainiai;Baltic Petroleum;true;true;true;55.2768731;23.9559502
+Turistų g. 92, Lazdijai;Baltic Petroleum;true;true;true;54.2168110;23.5037324
+P. Armino g. 69, Marijampolė;Baltic Petroleum;true;true;false;54.5326060;23.3532419
+Vasaros g. 15, Marijampolė;Baltic Petroleum;true;true;true;54.5546879;23.3750838
+Adomiškių k., Marijampolės r.;Baltic Petroleum;true;false;false;54.5853337;23.3881719
+M. Daukšos g. 17, Mažeikiai;Baltic Petroleum;true;false;true;56.3051017;22.3504598
+Vilniaus g.104, Molėtai;Baltic Petroleum;true;true;false;55.2164903;25.4030593
+V. Kudirkos g. 21A, N. Akmenė;Baltic Petroleum;true;true;true;56.3189463;22.8854683
+Nidos-Smiltynės pl. 6, Neringa;Baltic Petroleum;false;false;false;55.3007210;20.9800117
+Statybininkų g. 28, Pakruojis;Baltic Petroleum;true;true;true;55.9758999;23.8668393
+Elijos g. 26, Palanga;Baltic Petroleum;true;true;false;56.0156023;21.0968631
+Ganyklų g. 28C, Palanga;Baltic Petroleum;false;false;false;55.9232426;21.0751993
+Klaipėdos pl. 44, Palanga;Baltic Petroleum;true;false;false;55.9154883;21.0781987
+Tičkūnų k. Tičkūnų g. 31, Panevėžio r.;Baltic Petroleum;true;true;true;55.7734664;24.3656285
+Pušaloto g. 191A, Panevėžys;Baltic Petroleum;true;true;false;55.7531458;24.3123895
+Senamiesčio g. 116A, Panevėžys;Baltic Petroleum;true;true;true;55.7485434;24.3933705
+Smėlynės g. 169, Panevėžys;Baltic Petroleum;true;true;true;55.7578018;24.3672287
+Velžio kelias 74, Panevėžys;Baltic Petroleum;true;true;true;55.7214616;24.3921056
+Plateliai Ž. Kalvarijos g. 1A, Plungės r.;Baltic Petroleum;false;false;false;56.1043959;22.0055483
+Klaipėdos g. 61, Priekulė;Baltic Petroleum;true;true;false;55.5618617;21.3086286
+Vilniaus g. 3A, Prienai;Baltic Petroleum;true;true;true;54.6283743;23.9583681
+Veiverių k., Prienų r.;Baltic Petroleum;true;true;false;54.7655770;23.7231200
+Užuovėjos k., Radviliškio r.;Baltic Petroleum;true;false;false;55.7601509;23.7164720
+Miško g. 64, Radviliškis;Baltic Petroleum;true;true;true;55.8007406;23.5657024
+Šiaulių g. 1A, Radviliškis;Baltic Petroleum;true;true;false;55.8257724;23.5232653
+Vilniaus g. 30, Raseiniai;Baltic Petroleum;true;true;true;55.3708256;23.1331654
+Kalnujų k., Raseinių r.;Baltic Petroleum;true;true;false;55.3271179;23.0959239
+Pandėlio k. Rokiškio g. 6, Rokiškio r.;Baltic Petroleum;true;true;false;56.0191102;25.2222113
+Dariaus ir Girėno g. 138A, Tauragė;Baltic Petroleum;true;true;false;55.2664900;22.3114339
+Šiaulių pl. 12, Telšiai;Baltic Petroleum;true;true;false;56.0042302;22.2455228
+Varniai Dariaus ir Girėno g. 76, Telšių r.;Baltic Petroleum;true;true;false;55.7308746;22.3767159
+Vilniaus g. 33, Trakai;Baltic Petroleum;true;true;true;54.6275546;24.9482126
+Kauno g. 49, Ukmergė;Baltic Petroleum;true;true;false;55.2403745;24.7392498
+Basanavičiaus g. 1B, Utena;Baltic Petroleum;true;true;true;55.4952790;25.5750056
+Metalo g. 8, Utena;Baltic Petroleum;true;true;false;55.4968443;25.6304497
+Čiurlionio g. 63, Varėna;Baltic Petroleum;true;true;true;54.2181199;24.5661770
+Merkinės m. Vilniaus g. 87, Varėnos r. sav.;Baltic Petroleum;true;true;false;54.1664137;24.1967580
+Senoji Varėna Vilniaus g. 6A, Varėnos r.;Baltic Petroleum;true;false;false;54.2572590;24.5486260
+Nemenčinės sen. Vilkaraisčio k., Vilniaus r.;Baltic Petroleum;true;true;true;54.8634819;25.4942549
+Antakalnio g. 128, Vilnius;Baltic Petroleum;true;true;true;54.7221993;25.3172966
+Gariūnų g. 16A, Vilnius;Baltic Petroleum;true;true;false;54.6607989;25.1689614
+Gerosios Vilties g. 33, Vilnius;Baltic Petroleum;true;true;false;54.6659550;25.2515932
+Kalvarijų g. 161A, Vilnius;Baltic Petroleum;true;true;true;54.7240006;25.2822396
+Metalo g. 4B, Vilnius;Baltic Petroleum;true;true;false;54.6404835;25.2674716
+Molėtų pl. 27A, Vilnius;Baltic Petroleum;true;true;true;54.7676660;25.2723950
+Rinktinės g. 59, Vilnius;Baltic Petroleum;true;true;true;54.7028269;25.2881799
+S. Batoro g. 15, Vilnius;Baltic Petroleum;true;false;false;54.6926975;25.3794461
+Savanorių pr. 121, Vilnius;Baltic Petroleum;true;true;false;54.6608109;25.2334109
+Verkių g. 52A, Vilnius;Baltic Petroleum;true;true;false;54.7203322;25.2942100
+Sodų g. 1, Šakiai;Baltic Petroleum;true;true;false;54.9457783;23.0461410
+Vilniaus g. 5A, Šalčininkai;Baltic Petroleum;true;true;true;54.3184316;25.3816091
+Rytinio Kelio g. 2, Šilalė;Baltic Petroleum;true;false;false;55.4895829;22.1997540
+Klaipėdos g. 4A, Šilutė;Baltic Petroleum;true;true;false;55.3531328;21.4632440
+Musninkų g. 21, Širvintos;Baltic Petroleum;true;true;true;55.0319419;24.9668855
+Dariaus ir Girėno g. 19, Rietavas;Baltic Petroleum;true;false;true;55.7194777;21.9281256
+Pietinio Kelio g. 9, Šolių k., Šilalės r.;Jozita;true;false;false;55.4842058;22.1845453
+Maironio g. 78b, Raseiniai;Jozita;true;false;false;55.3893783;23.1302978
+Jonavos g. 51 Kaunas;Jozita;true;false;true;54.9339739;23.9177589
+Kuršių 13A, Kaunas;Jozita;true;false;false;54.9361520;23.8957190
+Pramonės g. 8a, Šilutė;Jozita;true;false;false;55.3553837;21.4682005
+Traksėdžių k., Šilutės r.;Jozita;true;false;false;55.3699139;21.4625010
+Girulių g. 1, Šiauliai;Jozita;true;false;true;55.9222280;23.2969310
+Kadugių k., Šiaulių r.;Jozita;true;false;true;55.9618469;23.2476250
+Nemuno g. 26a, Šilutė;Jozita;true;false;false;55.3522413;21.4906544
+Architektų g. 80, Šiauliai;Jozita;true;false;true;55.9245770;23.2795320
+Vilniaus g. 101, Molėtai;Luktarna;true;true;true;55.2228415;25.4046404
+Liepkalnio g. 128a, Vilnius;Luktarna;true;true;false;54.6475019;25.3039320
+Justiniškių g. 12, Vilnius;Luktarna;true;false;false;54.7031989;25.2193919
+Kauno g. 26, Vievis;Luktarna;true;true;false;54.7713833;24.8199855
+Baltijos g. 90b, Kaunas;Luktarna;true;true;false;54.9180299;23.8736443
+Didžioji g. 68, Kaunas;Luktarna;true;true;false;54.8551800;24.0131979
+A. Juozapavičiaus pr. 90, Kaunas;Luktarna;true;true;false;54.8778250;23.9346119
+Marijampolės pl. 29, Kaunas;Luktarna;true;true;false;54.8489099;23.9666480
+Miežėnų g. 18, Kaunas;Luktarna;true;true;false;54.9184674;23.8620581
+Ateities pl. 105, Kaunas;Luktarna;true;true;false;54.8987346;24.0166872
+Pramonės pr. 44, Kaunas;Luktarna;true;true;false;54.9270980;23.9746890
+Veiverių g. 117, Kaunas;Luktarna;true;true;false;54.8844387;23.8948432
+Zapyškis, Kauno raj.;Luktarna;true;false;false;54.9269270;23.6641179
+Nemuno g. 139, Klaipėda;Luktarna;true;false;false;55.6741772;21.1482020
+Vytauto g. 163, Kretinga;Luktarna;true;false;false;55.8906204;21.2785944
+Vilniaus g. 50a, Švenčionys;Luktarna;true;true;false;55.1257043;26.1452175
+Plento g. 4, Širvintos;Luktarna;true;true;true;55.0454478;24.9425033
+Piliakalnio g. 9, Anykščiai;Luktarna;true;true;false;55.5413918;25.1349135
+Vienuolio g. 34, Anykščiai;Luktarna;false;false;false;55.5216581;25.0862317
+Žemaitės g. 2, Rokiškis;Luktarna;true;true;false;55.9346293;25.5878906
+Panevėžio g. 9, Rokiškis;Luktarna;true;true;false;55.9418440;25.5802557
+Juodalaukių km., Zarasų sen., Zarasų raj.;Luktarna;true;true;true;55.7306007;26.2436262
+Pergalės g. 15, Kupiškis;Luktarna;true;true;false;55.8446318;24.9789297

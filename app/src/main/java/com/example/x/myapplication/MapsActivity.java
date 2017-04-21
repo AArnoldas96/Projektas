@@ -41,7 +41,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LocationListener{
 
 
-    public static final String mPath = "stationsAuto.txt";
+    public static final String mPath = "stationsAutoLatLng.txt";
     public static final String TAG = MapsActivity.class.getSimpleName();
 
     private GoogleMap mMap;
@@ -51,6 +51,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private MakingStations stationReader;
     private GasStation[] stationArray;
     List<Marker> mMarkers = new ArrayList<Marker>();
+    Marker nearest;
 
     LocationRequest mLocationRequest;
     GoogleApiClient mGoogleApiClient;
@@ -99,7 +100,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         stationArray = stationReader.readFiles(mPath);
 
         for (GasStation station : stationArray) {
-            if (station.Location != null){
+            if (station.Location != null) {
                 MarkerOptions markerOptions = new MarkerOptions();
                 markerOptions.position(station.Location);
                 Marker marker = mMap.addMarker(new MarkerOptions()
@@ -111,7 +112,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     .position(station.Location)
                     .title(station.toString()));*/
         }
-
     }
 
     @Override
@@ -519,6 +519,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         markerOptions.title("Current Position");
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
         mCurrLocationMarker = mMap.addMarker(markerOptions);
+        getNearestMarker().setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN));
 
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
@@ -599,5 +600,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             // other 'case' lines to check for other permissions this app might request.
             //You can add here other case statements according to your requirement.
         }
+    }
+
+    public Marker getNearestMarker(){
+        if (nearest != null){
+            nearest.setIcon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+        }
+        float mDistance = 99999999;
+        for (Marker marker : mMarkers){
+            float[] results = new float[1];
+            Location.distanceBetween(mCurrLocationMarker.getPosition().latitude, mCurrLocationMarker.getPosition().longitude,
+                    marker.getPosition().latitude, marker.getPosition().longitude, results);
+            if (results[0] < mDistance){
+                mDistance = results[0];
+                nearest = marker;
+            }
+        }
+        return nearest;
     }
 }
