@@ -6,6 +6,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Build;
+import android.os.StrictMode;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -51,6 +52,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private MakingStations stationReader;
     private GasStation[] stationArray;
     List<Marker> mMarkers = new ArrayList<Marker>();
+    List<Marker> closeMarkers = new ArrayList<Marker>();
     Marker nearest;
 
     LocationRequest mLocationRequest;
@@ -100,7 +102,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         stationArray = stationReader.readFiles(mPath);
 
         for (GasStation station : stationArray) {
-            if (station.Location != null) {
+           /* if (station.Location != null) {
                 String img;
                 switch (station.getName()){
                     case "Lukoil":
@@ -128,7 +130,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .position(station.Location)
                         .title(station.toString()).icon(BitmapDescriptorFactory.fromAsset(img)));
                 mMarkers.add(marker);
-            }
+            }*/
+            changeMarkerImage(station);
             /*mMap.addMarker(new MarkerOptions()
                     .position(station.Location)
                     .title(station.toString()));*/
@@ -672,11 +675,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             float[] results = new float[1];
             Location.distanceBetween(mCurrLocationMarker.getPosition().latitude, mCurrLocationMarker.getPosition().longitude,
                     marker.getPosition().latitude, marker.getPosition().longitude, results);
-            if (results[0] < mDistance){
-                mDistance = results[0];
-                nearest = marker;
+            if (results[0] < 1000) {
+                closeMarkers.add(marker);
             }
         }
+        for (Marker closeMarker : closeMarkers){
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitNetwork().build();
+            StrictMode.setThreadPolicy(policy);
+            GetDistanceJSON test = new GetDistanceJSON(mCurrLocationMarker.getPosition(), closeMarker.getPosition());
+            test.getJson();
+            if (test.getDistance() < mDistance){
+                mDistance = test.getDistance();
+                nearest = closeMarker;
+            }
+        }
+        if (nearest == null){
+            nearest = mCurrLocationMarker;
+        }
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().detectNetwork().build();
+        StrictMode.setThreadPolicy(policy);
         return nearest;
     }
 }
