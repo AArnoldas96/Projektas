@@ -22,6 +22,10 @@ public class GasStation {
         Carwash = carwash;
     }
 
+    public String getName() {
+        return StationName;
+    }
+
     public boolean getFood(){
         return Food;
     }

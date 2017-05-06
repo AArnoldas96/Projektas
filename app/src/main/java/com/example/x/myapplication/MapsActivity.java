@@ -101,11 +101,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         for (GasStation station : stationArray) {
             if (station.Location != null) {
+                String img;
+                switch (station.getName()){
+                    case "Lukoil":
+                        img="lukoil.png";
+                        break;
+                    case "Orlen":
+                        img="orlen.png";
+                        break;
+                    case "Baltic Petroleum":
+                        img="baltic-petroleum.png";
+                        break;
+                    case "Jozita":
+                        img="jozita.png";
+                        break;
+                    case "Luktarna":
+                        img="luk.png";
+                        break;
+                    default:
+                        img="neste.png";
+                        break;
+                }
                 MarkerOptions markerOptions = new MarkerOptions();
                 markerOptions.position(station.Location);
                 Marker marker = mMap.addMarker(new MarkerOptions()
                         .position(station.Location)
-                        .title(station.toString()));
+                        .title(station.toString()).icon(BitmapDescriptorFactory.fromAsset(img)));
                 mMarkers.add(marker);
             }
             /*mMap.addMarker(new MarkerOptions()
@@ -233,10 +254,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if(station.getFood()!=true) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
 
                             }
@@ -245,11 +267,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (station.getCarwash() && station.getFood()!=true) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
-
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
                             }
                         }
@@ -257,10 +279,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (station.getAir() && station.getFood()!=true) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
                             }
                         }
@@ -268,10 +291,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (!station.getFood()) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
                             }
                         }
@@ -346,10 +370,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (station.getFood() && station.getAir() && station.getCarwash()!=true) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
                             }
                         }
@@ -357,10 +382,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (station.getFood() && station.getCarwash()!=true) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
                             }
                         }
@@ -368,10 +394,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (station.getAir() && station.getCarwash()!=true) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
                             }
                         }
@@ -379,10 +406,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (!station.getCarwash() && station.getCarwash()!=true) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
                             }
                         }
@@ -459,10 +487,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (station.getFood() && station.getCarwash() && station.getAir()!=true) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
                             }
                         }
@@ -470,10 +499,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (station.getFood() && station.getAir()!=true) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
                                 }
                             }
                         }
@@ -481,10 +510,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (station.getFood() && station.getAir()!=true) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
                             }
                         }
@@ -492,16 +522,47 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         for (GasStation station : stationArray) {
                             if (station.Location != null) {
                                 if (!station.getAir()) {
-                                    Marker marker = mMap.addMarker(new MarkerOptions()
+                                    /*Marker marker = mMap.addMarker(new MarkerOptions()
                                             .position(station.Location)
                                             .title(station.toString()));
-                                    mMarkers.add(marker);
+                                    mMarkers.add(marker);*/
+                                    changeMarkerImage(station);
                                 }
                             }
                         }
                     }
                 }
                 break;
+        }
+    }
+
+    public void changeMarkerImage(GasStation station){
+            if (station.Location != null) {
+                String img;
+                switch (station.getName()){
+                    case "Lukoil":
+                        img="lukoil.png";
+                        break;
+                    case "Orlen":
+                        img="orlen.png";
+                        break;
+                    case "Baltic Petroleum":
+                        img="baltic-petroleum.png";
+                        break;
+                    case "Jozita":
+                        img="jozita.png";
+                        break;
+                    case "Luktarna":
+                        img="luk.png";
+                        break;
+                    default:
+                        img="neste.png";
+                        break;
+                }
+                Marker marker = mMap.addMarker(new MarkerOptions()
+                        .position(station.Location)
+                        .title(station.toString()).icon(BitmapDescriptorFactory.fromAsset(img)));
+                mMarkers.add(marker);
         }
     }
 
