@@ -24,7 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:onClick="onMapSearch"
-            android:text="Paieška" />
+            android:text="Paieška"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white" />
 
     </LinearLayout>
 
