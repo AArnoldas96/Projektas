@@ -2,12 +2,8 @@ package com.example.x.myapplication;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import android.location.Address;
-import android.location.Geocoder;
-import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.wearable.NodeApi;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,24 +27,19 @@ public class MakingStations {
         return stationArray;
     }
 
-
-
     public List<String> readLine(String path) {
         List<String> mLines = new ArrayList<>();
-
         AssetManager am = mContext.getAssets();
-
         try {
             InputStream is = am.open(path);
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             String line;
-
             while ((line = reader.readLine()) != null)
                 mLines.add(line);
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
-
         return mLines;
     }
 
@@ -65,31 +56,4 @@ public class MakingStations {
             }
         }
     }
-
-   /* private LatLng getLocationFromAddress(String strAddress) {
-
-        Geocoder coder = new Geocoder(this.mContext);
-        List<Address> address;
-        LatLng p1 = null;
-
-        try {
-            // May throw an IOException
-            address = coder.getFromLocationName(strAddress, 5);
-            if (address.size() < 1) {
-                Log.d(MapsActivity.TAG, strAddress);
-                return null;
-            }
-            Address location = address.get(0);
-            location.getLatitude();
-            location.getLongitude();
-
-            p1 = new LatLng(location.getLatitude(), location.getLongitude() );
-
-        } catch (IOException ex) {
-
-            ex.printStackTrace();
-        }
-
-        return p1;
-    }*/
 }
