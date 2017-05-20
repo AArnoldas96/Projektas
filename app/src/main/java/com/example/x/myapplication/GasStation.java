@@ -4,15 +4,13 @@ package com.example.x.myapplication;
 import com.google.android.gms.maps.model.LatLng;
 
 public class GasStation {
+
     private String StationName;
-    String Adress;
+    private String Adress;
     private boolean Food;
     private boolean Air;
     private boolean Carwash;
-    LatLng Location;
-
-    public GasStation(){
-    }
+    private LatLng Location;
 
     public GasStation(String adress, String name, boolean food, boolean air, boolean carwash) {
         StationName = name;
@@ -25,7 +23,6 @@ public class GasStation {
     public String getName() {
         return StationName;
     }
-
     public boolean getFood(){
         return Food;
     }
@@ -35,6 +32,10 @@ public class GasStation {
     public boolean getCarwash(){
         return Carwash;
     }
+    public LatLng getLocation(){
+        return Location;
+    }
+
     public void setLocation(LatLng locat){
         Location = locat;
     }
