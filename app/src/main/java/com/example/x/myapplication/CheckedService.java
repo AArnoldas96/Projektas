@@ -15,33 +15,14 @@ public class CheckedService {
                              List<Marker> mMarkers,GoogleMap mMap){
         if (checked) {
             if (check2.isChecked() && check3.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getFood() && station.getCarwash() && station.getAir())) {
-                            removeMarker(mMarkers, station);
-                        }
-                    }
-                }
-
+                firstConditionChecked(stationArray, mMarkers);
             } else if (check2.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getFood() && station.getCarwash())) {
-                            removeMarker(mMarkers, station);
-                        }
-                    }
-                }
+                foodCarwashCondition(stationArray, mMarkers);
             } else if (check3.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getFood() && station.getAir())) {
-                            removeMarker(mMarkers, station);
-                        }
-                    }
-                }
+                foodAirCondition(stationArray, mMarkers);
             } else {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (!(station.getFood() == true)) {
                             removeMarker(mMarkers, station);
                         }
@@ -52,8 +33,8 @@ public class CheckedService {
         } else {
             if (check2.isChecked() && check3.isChecked()) {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (station.getFood() && station.getAir() && station.getCarwash() != true) {
+                    if (station.getLocation() != null) {
+                        if (station.getCarwash() && station.getAir() && station.getFood() != true) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
 
@@ -61,7 +42,7 @@ public class CheckedService {
                 }
             } else if (check2.isChecked()) {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (station.getCarwash() && station.getFood() != true) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
@@ -69,7 +50,7 @@ public class CheckedService {
                 }
             } else if (check3.isChecked()) {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (station.getAir() && station.getFood() != true) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
@@ -77,7 +58,7 @@ public class CheckedService {
                 }
             } else {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (!station.getFood()) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
@@ -91,32 +72,14 @@ public class CheckedService {
                               List<Marker> mMarkers,GoogleMap mMap){
         if (checked) {
             if (check1.isChecked() && check3.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getFood() && station.getCarwash() && station.getAir())) {
-                            removeMarker(mMarkers, station);
-                        }
-                    }
-                }
+                firstConditionChecked(stationArray, mMarkers);
             } else if (check1.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getFood() && station.getCarwash())) {
-                            removeMarker(mMarkers, station);
-                        }
-                    }
-                }
+                foodCarwashCondition(stationArray, mMarkers);
             } else if (check3.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getCarwash() && station.getAir())) {
-                            removeMarker(mMarkers, station);
-                        }
-                    }
-                }
+                carwashAirCondition(stationArray, mMarkers);
             } else {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (!station.getCarwash() == true) {
                             removeMarker(mMarkers, station);
                         }
@@ -126,7 +89,7 @@ public class CheckedService {
         } else {
             if (check1.isChecked() && check3.isChecked()) {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (station.getFood() && station.getAir() && station.getCarwash() != true) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
@@ -134,7 +97,7 @@ public class CheckedService {
                 }
             } else if (check1.isChecked()) {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (station.getFood() && station.getCarwash() != true) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
@@ -142,7 +105,7 @@ public class CheckedService {
                 }
             } else if (check3.isChecked()) {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (station.getAir() && station.getCarwash() != true) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
@@ -150,7 +113,7 @@ public class CheckedService {
                 }
             } else {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (!station.getCarwash()) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
@@ -163,33 +126,14 @@ public class CheckedService {
                              List<Marker> mMarkers,GoogleMap mMap){
         if (checked) {
             if (check1.isChecked() && check2.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getFood() && station.getCarwash() && station.getAir())) {
-                            removeMarker(mMarkers, station);
-                        }
-
-                    }
-                }
+                firstConditionChecked(stationArray, mMarkers);
             } else if (check1.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getFood() && station.getAir())) {
-                            removeMarker(mMarkers, station);
-                        }
-                    }
-                }
+                foodAirCondition(stationArray, mMarkers);
             } else if (check2.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getCarwash() && station.getAir())) {
-                            removeMarker(mMarkers, station);
-                        }
-                    }
-                }
+                carwashAirCondition(stationArray, mMarkers);
             } else {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (!station.getAir()) {
                             removeMarker(mMarkers, station);
                         }
@@ -199,7 +143,7 @@ public class CheckedService {
         } else {
             if (check1.isChecked() && check2.isChecked()) {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (station.getFood() && station.getCarwash() && station.getAir() != true) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
@@ -207,7 +151,7 @@ public class CheckedService {
                 }
             } else if (check1.isChecked()) {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (station.getFood() && station.getAir() != true) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
@@ -215,15 +159,15 @@ public class CheckedService {
                 }
             } else if (check2.isChecked()) {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (station.getFood() && station.getAir() != true) {
+                    if (station.getLocation() != null) {
+                        if (station.getCarwash() && station.getAir() != true) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
                     }
                 }
             } else {
                 for (GasStation station : stationArray) {
-                    if (station.Location != null) {
+                    if (station.getLocation() != null) {
                         if (!station.getAir()) {
                             changeMarkerImage(station, mMap, mMarkers);
                         }
@@ -242,8 +186,48 @@ public class CheckedService {
         }
     }
 
+    public void firstConditionChecked(GasStation[] stationArray, List<Marker> mMarkers){
+        for (GasStation station : stationArray) {
+            if (station.getLocation() != null) {
+                if (!(station.getFood() && station.getCarwash() && station.getAir())) {
+                    removeMarker(mMarkers, station);
+                }
+            }
+        }
+    }
+
+    public void foodCarwashCondition(GasStation[] stationArray, List<Marker> mMarkers){
+        for (GasStation station : stationArray) {
+            if (station.getLocation() != null) {
+                if (!(station.getFood() && station.getCarwash())) {
+                    removeMarker(mMarkers, station);
+                }
+            }
+        }
+    }
+
+    public void foodAirCondition(GasStation[] stationArray, List<Marker> mMarkers){
+        for (GasStation station : stationArray) {
+            if (station.getLocation() != null) {
+                if (!(station.getFood() && station.getAir())) {
+                    removeMarker(mMarkers, station);
+                }
+            }
+        }
+    }
+
+    public void carwashAirCondition(GasStation[] stationArray, List<Marker> mMarkers){
+        for (GasStation station : stationArray) {
+            if (station.getLocation() != null) {
+                if (!(station.getCarwash() && station.getAir())) {
+                    removeMarker(mMarkers, station);
+                }
+            }
+        }
+    }
+
     public void changeMarkerImage(GasStation station, GoogleMap mMap, List<Marker> mMarkers){
-        if (station.Location != null) {
+        if (station.getLocation() != null) {
             String img;
             switch (station.getName()){
                 case "Lukoil":
@@ -266,133 +250,9 @@ public class CheckedService {
                     break;
             }
             Marker marker = mMap.addMarker(new MarkerOptions()
-                    .position(station.Location)
+                    .position(station.getLocation())
                     .title(station.toString()).icon(BitmapDescriptorFactory.fromAsset(img)));
             mMarkers.add(marker);
         }
     }
-
-
-    /*public void checked(CheckBox check2, CheckBox check3, boolean checked, GasStation[] stationArray,
-                             List<Marker> mMarkers,GoogleMap mMap, String service){
-        if (checked) {
-            if (check2.isChecked() && check3.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getFood() && station.getCarwash() && station.getAir())) {
-                            for (Marker marker : mMarkers) {
-                                if (marker.getTitle().equals(station.toString())) {
-                                    mMarkers.remove(marker);
-                                    marker.remove();
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-
-            } else if (check2.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if(service.equals("maistas")){
-
-                        }
-                        else if(service.equals("plovykla")){
-
-                        }
-                        else if(service.equals("oras")){
-
-                        }
-                        if (!(station.getFood() && station.getAir()))
-                        if (!(station.getFood() && station.getCarwash()))
-                        if (!(station.getFood() && station.getCarwash())) {
-                            for (Marker marker : mMarkers) {
-                                if (marker.getTitle().equals(station.toString())) {
-                                    mMarkers.remove(marker);
-                                    marker.remove();
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-            } else if (check3.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!(station.getCarwash() && station.getAir()))
-                        if (!(station.getCarwash() && station.getAir()))
-                        if (!(station.getFood() && station.getAir())) {
-                            for (Marker marker : mMarkers) {
-                                if (marker.getTitle().equals(station.toString())) {
-                                    mMarkers.remove(marker);
-                                    marker.remove();
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-            } else {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!station.getAir())
-                        if (!station.getCarwash() == true)
-                        if (!(station.getFood() == true)) {
-                            for (Marker marker : mMarkers) {
-                                if (marker.getTitle().equals(station.toString())) {
-                                    mMarkers.remove(marker);
-                                    marker.remove();
-                                    break;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-        } else {
-            if (check2.isChecked() && check3.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (station.getFood() && station.getAir() && station.getCarwash() != true){
-                            changeMarkerImage(station, mMap, mMarkers);
-                        }
-
-                    }
-                }
-            } else if (check2.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (station.getFood() && station.getCarwash() != true)
-                        if (station.getFood() && station.getCarwash() != true)
-                        if (station.getCarwash() && station.getFood() != true) {
-                            changeMarkerImage(station, mMap, mMarkers);
-                        }
-                    }
-                }
-            } else if (check3.isChecked()) {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (station.getFood() && station.getAir() != true)
-                        if (station.getAir() && station.getCarwash() != true)
-                        if (station.getAir() && station.getFood() != true) {
-                            changeMarkerImage(station, mMap, mMarkers);
-                        }
-                    }
-                }
-            } else {
-                for (GasStation station : stationArray) {
-                    if (station.Location != null) {
-                        if (!station.getAir())
-                        if (!station.getCarwash())
-                        if (!station.getFood()) {
-                            changeMarkerImage(station, mMap, mMarkers);
-                        }
-                    }
-                }
-            }
-        }
-
-
-    }*/
 }
